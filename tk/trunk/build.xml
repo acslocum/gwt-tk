@@ -144,12 +144,6 @@
 		</java>
 	</target>
 
-	<target name="patch">
-		<antcall target="cleanCompileJarModule">
-			<param name="module" value="patch"/>
-		</antcall>
-	</target>
-	
 	<target name="emulation">
 		<antcall target="cleanModule">
 			<param name="module" value="emulation"/>
@@ -191,7 +185,7 @@
 		</antcall>
 	</target>
 	
-	<target name="test-dependencies" depends="patch,emulation,core,sandbox,debug,testutil"/>
+	<target name="test-dependencies" depends="emulation,core,sandbox,debug,testutil"/>
 	
 	<target name="test">
 		<timer>
@@ -259,7 +253,7 @@
 		</timer>
 	</target>
 	
-	<target name="jars" depends="patch,core,sandbox,debug,debugstub,testutil">
+	<target name="jars" depends="core,sandbox,debug,debugstub,testutil">
 		<delete dir="build/out"/>
 		<mkdir dir="build/out"/>
 		<mkdir dir="build/out/components"/>
@@ -329,7 +323,7 @@
 		<!-- TODO: copy javadocs to /doc -->
 	</target>
 	
-	<target name="full" depends="initBuildDir,patch,emulation,core,sandbox,debug,debugstub,testutil,test-dependencies,test,uitest,jars,javadoc"/>
+	<target name="full" depends="initBuildDir,emulation,core,sandbox,debug,debugstub,testutil,test-dependencies,test,uitest,jars,javadoc"/>
 	
 	<target name="compileDemo">
 		<description>Compiles obfuscated code *with* debug statments</description>
