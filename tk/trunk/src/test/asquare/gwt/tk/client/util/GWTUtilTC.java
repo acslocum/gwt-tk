@@ -135,7 +135,7 @@ public class GWTUtilTC extends GWTTestCase
 		Object[] dest;
 		
 		// null src
-		addCheckpoint("null src");
+		//addCheckpoint("null src");
 		setUpImpl();
 		try
 		{
@@ -149,7 +149,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// null dest
-		addCheckpoint("null dest");
+		//addCheckpoint("null dest");
 		setUpImpl();
 		try
 		{
@@ -163,7 +163,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// srcPos < 0
-		addCheckpoint("srcPos < 0");
+		//addCheckpoint("srcPos < 0");
 		setUpImpl();
 		try
 		{
@@ -178,7 +178,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// srcPos + length > src.length
-		addCheckpoint("srcPos + length > src.length");
+		//addCheckpoint("srcPos + length > src.length");
 		setUpImpl();
 		try
 		{
@@ -192,7 +192,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// destPos < 0
-		addCheckpoint("destPos < 0");
+		//addCheckpoint("destPos < 0");
 		setUpImpl();
 		try
 		{
@@ -206,7 +206,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// destPos + length > dest.length
-		addCheckpoint("destPos + length > dest.length");
+		//addCheckpoint("destPos + length > dest.length");
 		setUpImpl();
 		try
 		{
@@ -220,7 +220,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// length < 0
-		addCheckpoint("length < 0");
+		//addCheckpoint("length < 0");
 		setUpImpl();
 		try
 		{
@@ -234,7 +234,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// src not array
-		addCheckpoint("src not array");
+		//addCheckpoint("src not array");
 		setUpImpl();
 		try
 		{
@@ -248,7 +248,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 			
 		// dest not array
-		addCheckpoint("dest not array");
+		//addCheckpoint("dest not array");
 		setUpImpl();
 		try
 		{
@@ -262,7 +262,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// primative type mismatch
-		addCheckpoint("primative type mismatch");
+		//addCheckpoint("primative type mismatch");
 		setUpImpl();
 		boolean[] booleanArray = {true, true, false, false};
 		try
@@ -277,7 +277,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// src = primative[], dest = Object[]
-		addCheckpoint("src = primative[], dest = Object[]");
+		//addCheckpoint("src = primative[], dest = Object[]");
 		setUpImpl();
 		dest = new Object[4];
 		try
@@ -291,7 +291,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// src = Object[], dest = primative[]
-		addCheckpoint("src = Object[], dest = primative[]");
+		//addCheckpoint("src = Object[], dest = primative[]");
 		setUpImpl();
 		src = new Object[] {new Apple()};
 		try
@@ -305,7 +305,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// array type mismatch
-		addCheckpoint("array type mismatch");
+		//addCheckpoint("array type mismatch");
 		setUpImpl();
 		src = new Food[] {new Food()};
 		dest = new Apple[1];
@@ -320,7 +320,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// element type mismatch
-		addCheckpoint("element type mismatch");
+		//addCheckpoint("element type mismatch");
 		setUpImpl();
 		src = new Object[] {new Food()};
 		dest = new Apple[1];
@@ -335,7 +335,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// basic test
-		addCheckpoint("basic test");
+		//addCheckpoint("basic test");
 		setUpImpl();
 		GwtUtil.arrayCopy(m_sInt, 0, m_dInt, 0, m_sInt.length);
 		assertEquals(m_sInt[0], m_dInt[0]);
@@ -373,7 +373,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// src null
-		addCheckpoint("src null");
+		//addCheckpoint("src null");
 		setUpImpl();
 		try
 		{
@@ -386,7 +386,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// dest null
-		addCheckpoint("dest null");
+		//addCheckpoint("dest null");
 		setUpImpl();
 		try
 		{
@@ -399,7 +399,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// src.size() > dest.length
-		addCheckpoint("src.size() > dest.length");
+		//addCheckpoint("src.size() > dest.length");
 		setUpImpl();
 		try
 		{
@@ -412,7 +412,7 @@ public class GWTUtilTC extends GWTTestCase
 		}
 		
 		// dest wrong type
-		addCheckpoint("dest wrong type");
+		//addCheckpoint("dest wrong type");
 		setUpImpl();
 		try
 		{

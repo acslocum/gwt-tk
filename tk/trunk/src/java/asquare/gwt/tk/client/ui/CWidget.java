@@ -21,7 +21,7 @@ import asquare.gwt.tk.client.ui.behavior.Controller;
 import asquare.gwt.tk.client.ui.behavior.ControllerSupport;
 import asquare.gwt.tk.client.ui.behavior.ControllerSupportDelegate;
 
-import com.google.gwt.user.client.Element;
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.Widget;
 

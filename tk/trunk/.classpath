@@ -8,6 +8,22 @@
 	<classpathentry kind="src" path="src/debug"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3.8.1"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/ant-gwt.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/gwt-api-checker.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/gwt-codeserver.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/gwt-dev.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/gwt-elemental.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/gwt-servlet-deps.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/gwt-servlet.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/gwt-user.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-apt-src.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-apt.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-client-src.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-client.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-client+src.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-server-src.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-server.jar"/>
+	<classpathentry kind="lib" path="/Users/acslocum/dev/gwt-2.8.2/requestfactory-server+src.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_151]"/>
 	<classpathentry kind="output" path="bin/java"/>
 </classpath>

@@ -296,13 +296,13 @@ public class CWindow extends CComposite implements Positionable
 		@Override
 		protected Element getContainerElement()
 		{
-			return m_popupImpl.getContainerElement(getElement());
+			return DOM.asOld(m_popupImpl.getContainerElement(getElement()));
 		}
 		
 		@Override
 		protected Element getStyleElement()
 		{
-			return m_popupImpl.getContainerElement(getElement());
+			return DOM.asOld(m_popupImpl.getContainerElement(getElement()));
 		}
 
 		@Override
@@ -312,7 +312,7 @@ public class CWindow extends CComposite implements Positionable
 				return;
 			
 			super.onAttach();
-			m_popupImpl.onShow(getElement());
+			//m_popupImpl.onShow(getElement()); //not sure what to replace this with - may not be relevant anymore - see gwt 7d58ddda829652519f0544790ce995d4dd8ffc64
 		}
 		
 		@Override
@@ -327,7 +327,7 @@ public class CWindow extends CComposite implements Positionable
 			}
 			finally
 			{
-				m_popupImpl.onHide(getElement());
+				//m_popupImpl.onHide(getElement()); //not sure what to replace this with - may not be relevant anymore - see gwt 7d58ddda829652519f0544790ce995d4dd8ffc64
 			}
 		}
 	}

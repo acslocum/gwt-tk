@@ -14,20 +14,16 @@
  the License.
  -->
 <module>
-	<inherits name='com.google.gwt.user.User'/>
-	
-	<!-- patches must be after Google module -->
-	<inherits name='com.google.gwt.user.Patch'/>
-	
-	<inherits name='asquare.gwt.tk.DomUtil'/>
-	
-	<inherits name='asquare.gwt.tk.GlassPanel'/>
-	<inherits name='asquare.gwt.tk.TabFocusController'/>
-	<inherits name='asquare.gwt.tk.PreventSelectionController'/>
-	<inherits name='asquare.gwt.tk.CPopupPanel'/>
-	<inherits name='asquare.gwt.tk.ModalDialog'/>
-	<inherits name='asquare.gwt.tk.MouseMoveFilter'/>
-	<inherits name='asquare.gwt.tk.PreventDragController'/>
-	
-	<source path="client"/>
+	<replace-with class="com.google.gwt.user.client.impl.DOMImplMozillaPatched">
+		<when-type-is class="com.google.gwt.user.client.impl.DOMImpl"/>
+		<any>
+			<when-property-is name="user.agent" value="gecko"/>
+			<when-property-is name="user.agent" value="gecko1_8"/>
+		</any>
+	</replace-with>
+
+	<replace-with class="com.google.gwt.user.client.impl.DOMExtensionImplSafari">
+		<when-type-is class="com.google.gwt.user.client.impl.DOMExtensionImpl"/>
+		<when-property-is name="user.agent" value="safari"/>
+	</replace-with>
 </module>

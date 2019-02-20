@@ -58,7 +58,8 @@
 		<property name="src.dir" value="src/${module}"/>
 		<echo level="info" message="src.dir=${src.dir}"/>
 		<mkdir dir="build/${module}/classes"/>
-		<javac source="1.5" target="1.5" debug="on" destdir="build/${module}/classes" srcdir="${src.dir}">
+		<echo message="module.classpath ${module.classpath}"/>
+		<javac source="8" target="8" debug="on" destdir="build/${module}/classes" srcdir="${src.dir}">
 			<classpath>
 				<pathelement path="${module.classpath}"/><!-- optional -->
 				<fileset dir="build">
@@ -117,7 +118,6 @@
 		
 		<java classname="com.google.gwt.dev.Compiler" failonerror="true" fork="true">
   	        <jvmarg value="-client"/>
-  	        <jvmarg value="-Xmx128M"/>
 			<sysproperty key="java.awt.headless" value="true"/>
 			<classpath>
 				<path location="${src.dir}"/>
@@ -179,6 +179,7 @@
 	</target>
 	
 	<target name="testutil" depends="sandbox">
+		<echo message="junit.lib = ${junit.lib}"></echo>
 		<antcall target="cleanCompileJarModule">
 			<param name="module" value="testutil"/>
 			<param name="module.classpath" value="${junit.lib}"/>
@@ -201,7 +202,7 @@
 			<copy todir="build/test/jars" flatten="true">
 				<fileset dir="build" includes="**/*.jar" excludes="**/*debugstub*"/>
 			</copy>
-			<junit printsummary="true" fork="true" forkmode="perTest" haltonfailure="true" maxmemory="256M" dir="build" showoutput="true" tempdir="build/test">
+			<junit printsummary="true" fork="true" forkmode="perTest" haltonfailure="true" dir="build" showoutput="true" tempdir="build/test">
 	            <sysproperty key="gwt.args" value="-port 8889 -out test" />
 	  	        <jvmarg value="-client"/>
 	  	        <jvmarg line="${junit.platform.args}"/>
@@ -299,7 +300,7 @@
 				includenosourcepackages="true"
 				linksource="${javadoc.linksource}"
 				packagenames="*"
-				source="1.5"
+				source="8"
 				use="true"
 				windowtitle="${javadoc.windowtitle}">
 			<classpath>
@@ -323,7 +324,7 @@
 		<!-- TODO: copy javadocs to /doc -->
 	</target>
 	
-	<target name="full" depends="initBuildDir,emulation,core,sandbox,debug,debugstub,testutil,test-dependencies,test,uitest,jars,javadoc"/>
+	<target name="full" depends="initBuildDir,emulation,core,sandbox,debug,debugstub,testutil,test-dependencies,test,uitest,jars"/>
 	
 	<target name="compileDemo">
 		<description>Compiles obfuscated code *with* debug statments</description>
@@ -458,7 +459,7 @@
 				doctitle="Google Web Toolkit (GWT) API Documentation"
 				includenosourcepackages="true"
 				linksource="true"
-				source="1.5"
+				source="8"
 				use="true"
 				windowtitle="GWT API Documentation">
 			<bottom>

@@ -90,8 +90,8 @@ public class JsUtilTC extends GWTTestCase
 		
 		try
 		{
-			JsUtil.arrayLength(null);
-			fail("expected JavaScript exception because array is null");
+			int result = JsUtil.arrayLength(null);
+			fail("expected JavaScript exception because array is null but was " + result);
 		}
 		catch (JavaScriptException e)
 		{

@@ -23,6 +23,7 @@ import asquare.gwt.tk.client.ui.commands.FocusCommand;
 import asquare.gwt.tk.client.util.DomUtil;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.*;
 import com.google.gwt.user.client.ui.Focusable;
 import com.google.gwt.user.client.ui.Widget;
